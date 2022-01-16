@@ -1,0 +1,330 @@
+{
+
+    "Users": [
+
+        {
+
+            "info": "POST A NEW USER //this is only for admins",
+            "endpoint": "/api/users/",
+            "action": "POST",
+            "requested": {
+
+                "name": "Example",
+                "email": "example@gmail.com",
+                "old": 33,
+                "password": "admin password, u can try to send us an email to request this password"
+
+            },
+            "response" : {
+
+                "name": "Example",
+                "email": "example@gmail.com",
+                "old": 33
+
+            }
+
+        },
+
+        {
+
+            "info": "GET USERS //this is only for admins",
+            "endpoint": "/api/users/",
+            "action": "GET",
+            "response" : {
+
+                "_id": "61e1980fe708e0c3c1efd7b4",
+                "name": "Example",
+                "email": "example@gmail.com",
+                "old": 33,
+                "password": "$2b$10$P3aXCSMuMY/JQqd4MoQnN.NXjF68B3iPJveq.t.IS5qXTttQ.NYwu",
+                "__v": 0,
+                "createdAt": "2022-01-14T15:34:39.934Z",
+                "updatedAt": "2022-01-14T15:48:19.956Z"
+
+            }
+
+        },
+
+        {
+
+            "info": "LOGIN //this is only for admins",
+            "endpoint": "/api/users/login",
+            "action": "LOGIN",
+            "requested": {
+
+                "email": "example@gmail.com",
+	            "password": "admin password" 
+
+            },
+            "response" : {
+
+                "token": "recieves token"
+
+            }
+
+        },
+
+        {
+
+            "info": "PATCH ONE USER BY ID //this is only for admins",
+            "endpoint": "/api/users/:id",
+            "action": "PATCH",
+            "requested": {
+
+                "name": "ExampleModified",
+                "email": "example@gmail.com",
+                "old": 39,
+                "password": "admin password",
+                "__v": 0
+
+            },
+            "response" : {
+
+                "new": {
+                    "name": "ExampleModified",
+                    "email": "example@gmail.com",
+                    "old": 39,
+                    "password": "admin password",
+                    "_id": "61e1980fe708e0c3c1efd7b4",
+                    "__v": 0
+                },
+                "old": {
+                    "_id": "61e1980fe708e0c3c1efd7b4",
+                    "name": "Example",
+                    "email": "example@gmail.com",
+                    "old": 39,
+                    "password": "$2b$10$P3aXCSMuMY/JQqd4MoQnN.NXjF68B3iPJveq.t.IS5qXTttQ.NYwu",
+                    "__v": 0,
+                    "createdAt": "2022-01-14T15:34:39.934Z",
+                    "updatedAt": "2022-01-14T15:34:39.934Z"
+                }
+
+            }
+
+        },
+
+        {
+
+            "info": "LOGOUT //this is only for admins",
+            "endpoint": "/api/users/logout",
+            "action": "LOGOUT",
+            "response" : {
+
+                "token": "null"
+
+            }
+
+
+        }
+
+    ],
+
+    "Components": [
+
+        {
+
+            "info": "POST A NEW COMPONENT //this is only for admins",
+            "endpoint": "/api/components",
+            "action": "POST",
+            "requested": {
+
+                "name": "NameExample",
+                "model": "ModelExample"
+
+            },
+            "response" : {
+
+                "_id": "61e199d4e708e0c3c1efd7cd",
+                "name": "NameExample",
+                "model": "ModelExample",
+                "createdAt": "2022-01-14T15:42:12.063Z",
+                "updatedAt": "2022-01-14T15:42:12.063Z",
+                "__v": 0
+
+            }
+
+        },
+
+        {
+
+            "info": "GET ALL COMPONENTS",
+            "endpoint": "/api/components",
+            "action": "GET",
+            "response" : {
+
+                "_id": "61e199d4e708e0c3c1efd7cd",
+                "name": "NameExample",
+                "model": "ModelExample",
+                "createdAt": "2022-01-14T15:42:12.063Z",
+                "updatedAt": "2022-01-14T15:42:12.063Z",
+                "__v": 0
+
+            }
+
+        },
+
+        {
+
+            "info": "GET COMPONENT BY ID",
+            "endpoint": "/api/components/:id",
+            "action": "GET",
+            "response" : {
+
+                "_id": "61e199d4e708e0c3c1efd7cd",
+                "name": "NameExample",
+                "model": "ModelExample",
+                "createdAt": "2022-01-14T15:42:12.063Z",
+                "updatedAt": "2022-01-14T15:42:12.063Z",
+                "__v": 0
+
+            }
+
+        },
+
+        {
+
+            "info": "PATCH ONE COMPONENT BY ID //this is only for admins",
+            "endpoint": "/api/pcs/:id",
+            "action": "PATCH",
+            "requested": {
+
+                "name": "NameExampleModified",
+                "model": "ModelExampleModified"
+
+            },
+            "response" : {
+
+                "new": {
+                    "name": "NameExampleModified",
+                    "model": "ModelExampleModified",
+                    "_id": "61e198a7e708e0c3c1efd7bb"
+                },
+                "old": {
+                    "_id": "61e198a7e708e0c3c1efd7bb",
+                    "name": "NameExample",
+                    "model": "ModelExample",
+                    "createdAt": "2022-01-14T15:37:11.703Z",
+                    "updatedAt": "2022-01-14T15:37:11.703Z",
+                    "__v": 0
+
+                }
+
+            }
+
+        },
+
+        {
+
+            "info": "DELETE COMPONENT BY ID //this is only for admins",
+            "endpoint": "/api/components/:id",
+            "action": "DELETE",
+            "response" : {
+
+                "_id": "61e199d4e708e0c3c1efd7cd",
+                "name": "NameExample",
+                "model": "ModelExample",
+                "createdAt": "2022-01-14T15:42:12.063Z",
+                "updatedAt": "2022-01-14T15:42:12.063Z",
+                "__v": 0
+
+            }
+
+        }
+
+    ],
+
+    "Pcs": [
+
+        {
+
+            "info": "POST A NEW PC //this is only for admins",
+            "endpoint": "/api/pcs",
+            "action": "POST",
+            "requested": {
+
+                "model": "PcExample",
+                "img": "ExampleUrl",
+                "price": 321,
+                "components": "ComponentId"
+
+            },
+            "response" : {
+
+                "components": [
+                    "ComponentId"
+                ],
+                "_id": "61e29e53e9daceabb859b14c",
+                "model": "PcExample",
+                "img": "ExampleUrl",
+                "price": 321,
+                "__v": 0
+
+            }
+
+        },
+
+        {
+
+            "info": "GET ALL PCS",
+            "endpoint": "/api/pcs",
+            "action": "GET",
+            "response" : {
+
+                "_id": "61e19aad1099c8adb9581088",
+                "model": "Example",
+                "img": "ExampleUrl",
+                "price": 821,
+                "components": ["ComponentId"],
+                "__v": 0
+
+            }
+
+        },
+
+        {
+
+            "info": "GET ONE PC BY MODEL",
+            "endpoint": "/api/pcs/:model",
+            "action": "GET",
+            "response" : {
+
+                "_id": "61e19aad1099c8adb9581088",
+                "model": "Example",
+                "img": "ExampleUrl",
+                "price": 821,
+                "components": ["ComponentId"],
+                "__v": 0
+
+            }
+
+        },
+
+        {
+
+            "info": "PATCH ONE PC BY ID //this is only for admins",
+            "endpoint": "/api/pcs/:id",
+            "action": "PATCH",
+            "requested": {
+
+                "model": "ExamplePcModified",
+                "img": "ImgUrlModified",
+                "price": 80,
+                "components": ["ComponentId"]
+
+            },
+            "response" : {
+
+                "_id": "61e19aad1099c8adb9581088",
+                "model": "ExamplePcModified",
+                "img": "ImgUrlModified",
+                "price": 80,
+                "components": ["ComponentId"],
+                "__v": 0
+
+            }
+
+        }
+
+    ]
+
+}
